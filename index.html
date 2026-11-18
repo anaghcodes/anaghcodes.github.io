@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Procrastinator | Amateur Developer Portfolio</title>
+  <meta name="description" content="A funny, meme-inspired personal portfolio of a developer who converts coffee into questionable code.">
+  
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Toast Notification for Easter Eggs & Actions -->
+  <div id="toast" class="toast hidden" role="alert" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">dev/sleep_deprived</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home 🏠</a></li>
+        <li><a href="#about" class="nav-link">About Me ☕</a></li>
+        <li><a href="#skills" class="nav-link">Skills 🧠</a></li>
+        <li><a href="#projects" class="nav-link">Disasters 🛠️</a></li>
+        <li><a href="#contact" class="nav-link">Contact 📬</a></li>
+      </ul>
+
+      <!-- Theme Switcher & Mobile Menu Toggle -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle Coder Night Mode / Flashbang Mode">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-label" id="theme-label">Dark Mode</span>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Live Status Badge -->
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-text">⚠️ 0 days without a merge conflict</span>
+        </div>
+
+        <!-- Main Title & Subtitle -->
+        <h1 class="hero-title">
+          Professional <span class="highlight-alt">Procrastinator,</span><br>
+          <span class="highlight-primary">Amateur Developer.</span> 💻
+        </h1>
+        
+        <p class="hero-subtitle">
+          I convert fresh ground coffee and existential dread into questionable JavaScript. 
+          Expert in saying <em>"Well, it worked on my local machine"</em> and aggressively pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Inspect My Disasters 🚀</span>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Hire Me (I Accept Pizza) 🍕</span>
+          </a>
+          <button id="panic-btn" class="btn btn-warning" title="Emergency panic button">
+            <span>🚨 Do NOT Click</span>
+          </button>
+        </div>
+
+        <!-- Random Joke / Dev Excuse Generator Card -->
+        <div class="excuse-card">
+          <div class="excuse-card-header">
+            <span class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="excuse-card-title">💡 Magic Dev Excuse & Meme Generator</span>
+            <span class="badge">v4.04</span>
+          </div>
+          <div class="excuse-card-body">
+            <p id="excuse-text" class="excuse-text">
+              "It's not a bug. It's an undocumented surprise feature for power users."
+            </p>
+            <button id="new-excuse-btn" class="btn btn-accent btn-sm">
+              <span>🎲 Generate New Excuse</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating Meme Badges (Desktop decoration) -->
+        <div class="floating-badge badge-top-right">
+          <span>Works on my machine™ 🖥️</span>
+        </div>
+        <div class="floating-badge badge-bottom-left">
+          <span><code>git push --force</code> & pray 🙏</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// ORIGIN STORY</span>
+          <h2 class="section-title">About This Human Bug Generator 🐛</h2>
+          <p class="section-desc">Who am I? Good question. Even my rubber duck isn't totally sure.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Humorous Bio Card -->
+          <div class="about-card bio-card">
+            <div class="card-tag">TL;DR PROFILE</div>
+            <h3>Hello, World! I build things on the web.</h3>
+            <p>
+              I'm a self-declared software artisan who specializes in writing code that baffles future me six months from now. My journey started when I inspected element in high school to change my grades, and I've been chasing that hacker high ever since.
+            </p>
+            <p>
+              When I'm not furiously googling syntax I should have memorized three years ago, you can find me arguing with CSS over 1 pixel or explaining to non-tech relatives that no, I cannot fix their printer.
+            </p>
+
+            <ul class="fun-facts-list">
+              <li>🧠 <strong>Fluent in:</strong> English, Sarcastic JavaScript, and broken Git commands.</li>
+              <li>🦆 <strong>Mentorship:</strong> 100% managed by a yellow rubber duck named Sir Quacks-a-Lot.</li>
+              <li>🛡️ <strong>Safety Protocol:</strong> Testing directly in production because we die like brave developers.</li>
+              <li>🍕 <strong>Fuel Source:</strong> Espresso, cold pizza, and StackOverflow upvotes.</li>
+            </ul>
+          </div>
+
+          <!-- Humorous Statistics Grid -->
+          <div class="stats-column">
+            <div class="stat-card">
+              <div class="stat-emoji">☕</div>
+              <div class="stat-number" data-count="9999">9,999+</div>
+              <div class="stat-label">Cups of Coffee Consumed</div>
+              <div class="stat-sub">98% heart palpitations, 2% actual productivity</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-emoji">🔍</div>
+              <div class="stat-number">47,219</div>
+              <div class="stat-label">StackOverflow Visits</div>
+              <div class="stat-sub">And yet I still don't know how regex works</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-emoji">🐛</div>
+              <div class="stat-number">1,337</div>
+              <div class="stat-label">Bugs Created & Renamed</div>
+              <div class="stat-sub">Successfully reclassified as "Creative Quirks"</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-emoji">🛌</div>
+              <div class="stat-number highlight-text">404</div>
+              <div class="stat-label">Sleep Schedule</div>
+              <div class="stat-sub">Status: Not Found (Try rebooting human)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// PROVABLE CAPABILITIES</span>
+          <h2 class="section-title">My "Totally Real" Tech Stack 🧠</h2>
+          <p class="section-desc">Accurate, scientifically verified metrics of what happens when you leave me alone with a keyboard.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Bar Item 1 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">🔍 Googling Obscure Error Codes</span>
+              <span class="skill-percentage">99%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" data-progress="99%"></div>
+            </div>
+            <p class="skill-caption">Certified Senior Search-Engine Archaeologist.</p>
+          </div>
+
+          <!-- Skill Bar Item 2 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">🐛 Fixing One Bug Without Creating Three New Ones</span>
+              <span class="skill-percentage">20%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill progress-low" data-progress="20%"></div>
+            </div>
+            <p class="skill-caption">A statistical gamble every single time.</p>
+          </div>
+
+          <!-- Skill Bar Item 3 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">📐 Centering a &lt;div&gt; on First Attempt</span>
+              <span class="skill-percentage">12%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill progress-critical" data-progress="12%"></div>
+            </div>
+            <p class="skill-caption">Uses <code>display: flex</code>, cries softly, checks StackOverflow.</p>
+          </div>
+
+          <!-- Skill Bar Item 4 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">📑 Leaving 87 Browser Tabs Open Simultaneously</span>
+              <span class="skill-percentage">100%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" data-progress="100%"></div>
+            </div>
+            <p class="skill-caption">My RAM hates me, but I might need that tab from 3 weeks ago.</p>
+          </div>
+
+          <!-- Skill Bar Item 5 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">🎭 Pretending to Understand Regular Expressions</span>
+              <span class="skill-percentage">7%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill progress-critical" data-progress="7%"></div>
+            </div>
+            <p class="skill-caption">Mash random symbols together: <code>/[A-Z0-9._%+-]+@.../g</code></p>
+          </div>
+
+          <!-- Skill Bar Item 6 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">🔄 Blaming the User's Browser Cache</span>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" data-progress="95%"></div>
+            </div>
+            <p class="skill-caption">"Did you try doing a hard reload with Ctrl+Shift+R?"</p>
+          </div>
+
+          <!-- Skill Bar Item 7 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">🏷️ Creative Git Commit Messages</span>
+              <span class="skill-percentage">35%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill progress-low" data-progress="35%"></div>
+            </div>
+            <p class="skill-caption">Progression: "Initial commit" ➡️ "Fix bug" ➡️ "asdfgh" ➡️ "I quit".</p>
+          </div>
+
+          <!-- Skill Bar Item 8 -->
+          <div class="skill-card">
+            <div class="skill-info">
+              <span class="skill-name">⚡ Vanilla HTML, CSS & Modern JavaScript</span>
+              <span class="skill-percentage">88%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" data-progress="88%"></div>
+            </div>
+            <p class="skill-caption">Zero frameworks needed. Clean, snappy, and light on your CPU!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// MASTERPIECES OR DISASTERS?</span>
+          <h2 class="section-title">Projects Built During Procrastination 🛠️</h2>
+          <p class="section-desc">Real, definitely production-ready ideas that will undoubtedly revolutionize Silicon Valley.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-icon">🚨</span>
+              <span class="project-badge status-prod">Production Ready</span>
+            </div>
+            <h3 class="project-title">BugToFeature Converter™</h3>
+            <p class="project-description">
+              An enterprise pipeline that monitors uncaught exceptions in production and immediately updates marketing release notes to highlight them as "dynamic, cutting-edge user surprises."
+            </p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Gaslighting API</span>
+              <span class="tag">Denial</span>
+            </div>
+            <div class="project-actions">
+              <button class="project-btn demo-trigger" data-project="BugToFeature Converter">
+                <span>View Live Demo 👀</span>
+              </button>
+              <button class="project-btn source-trigger" data-project="BugToFeature Converter">
+                <span>Steal Code 💻</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-icon">📦</span>
+              <span class="project-badge status-wip">Patented Idea</span>
+            </div>
+            <h3 class="project-title">"Works On My Machine" Shipper</h3>
+            <p class="project-description">
+              Tired of Docker configurations failing on staging? This CLI tool automatically orders a courier to box up my physical workstation and ship it directly to the customer's server room.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Hardware</span>
+              <span class="tag">FedEx API</span>
+              <span class="tag">Bubble Wrap</span>
+            </div>
+            <div class="project-actions">
+              <button class="project-btn demo-trigger" data-project="Works On My Machine Shipper">
+                <span>View Live Demo 👀</span>
+              </button>
+              <button class="project-btn source-trigger" data-project="Works On My Machine Shipper">
+                <span>Steal Code 💻</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-icon">🍅</span>
+              <span class="project-badge status-prod">High Engagement</span>
+            </div>
+            <h3 class="project-title">Reverse Pomodoro Timer</h3>
+            <p class="project-description">
+              The anti-productivity booster. Work diligently for 5 consecutive minutes, followed immediately by 55 uninterrupted minutes of scrolling cat memes and buying things on Amazon.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Cat Memes</span>
+              <span class="tag">Doomscrolling</span>
+            </div>
+            <div class="project-actions">
+              <button class="project-btn demo-trigger" data-project="Reverse Pomodoro Timer">
+                <span>View Live Demo 👀</span>
+              </button>
+              <button class="project-btn source-trigger" data-project="Reverse Pomodoro Timer">
+                <span>Steal Code 💻</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-icon">🕵️</span>
+              <span class="project-badge status-wip">Legal Gray Area</span>
+            </div>
+            <h3 class="project-title">Git Blame Deflector 3000</h3>
+            <p class="project-description">
+              A git hook that silently amends commit metadata so whenever a critical production outage occurs, <code>git blame</code> automatically points to an intern who resigned 4 years ago.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Git Internals</span>
+              <span class="tag">Scapegoat Engine</span>
+              <span class="tag">Alibi</span>
+            </div>
+            <div class="project-actions">
+              <button class="project-btn demo-trigger" data-project="Git Blame Deflector">
+                <span>View Live Demo 👀</span>
+              </button>
+              <button class="project-btn source-trigger" data-project="Git Blame Deflector">
+                <span>Steal Code 💻</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-icon">💤</span>
+              <span class="project-badge status-danger">Fatal Error</span>
+            </div>
+            <h3 class="project-title">SleepDebt Overflow Calculator</h3>
+            <p class="project-description">
+              Calculates the exact amount of sleep owed to you since you started learning JavaScript asynchronous event loops. Warning: Results frequently cause integer overflow errors.
+            </p>
+            <div class="project-tags">
+              <span class="tag">BigInt</span>
+              <span class="tag">Existential Dread</span>
+              <span class="tag">Yawn.js</span>
+            </div>
+            <div class="project-actions">
+              <button class="project-btn demo-trigger" data-project="SleepDebt Calculator">
+                <span>View Live Demo 👀</span>
+              </button>
+              <button class="project-btn source-trigger" data-project="SleepDebt Calculator">
+                <span>Steal Code 💻</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-icon">📝</span>
+              <span class="project-badge status-prod">Classic</span>
+            </div>
+            <h3 class="project-title">The Ultimate Forgotten To-Do List</h3>
+            <p class="project-description">
+              A beautifully crafted, minimalist task application that you spend 4 solid days engineering, add 2 tasks to, and then proceed to never open ever again for the rest of human civilization.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Local Storage</span>
+              <span class="tag">Guilt</span>
+              <span class="tag">Abandoned</span>
+            </div>
+            <div class="project-actions">
+              <button class="project-btn demo-trigger" data-project="Forgotten To-Do List">
+                <span>View Live Demo 👀</span>
+              </button>
+              <button class="project-btn source-trigger" data-project="Forgotten To-Do List">
+                <span>Steal Code 💻</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">// REACH OUT (OR DON'T, I'M INTROVERTED)</span>
+          <h2 class="section-title">Let's Build Something Questionable 📬</h2>
+          <p class="section-desc">
+            Have a project, job offer, or just want to send me memes at 3 AM? My inbox is slightly open.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels Info -->
+          <div class="contact-card info-card">
+            <h3>Direct Transmissions</h3>
+            <p>
+              I reply to emails faster than I fix CSS bugs. Average response time: somewhere between 5 minutes and 3 business months.
+            </p>
+
+            <!-- Email with Quick Copy Button -->
+            <div class="email-copy-box">
+              <span class="email-icon">📧</span>
+              <span class="email-address" id="my-email">procrastinator.dev@example.com</span>
+              <button id="copy-email-btn" class="btn btn-sm btn-accent" title="Copy email address">
+                <span id="copy-btn-text">📋 Copy Email</span>
+              </button>
+            </div>
+
+            <!-- Social Links Grid -->
+            <h4 class="socials-title">Where to stalk my commit history:</h4>
+            <div class="social-links-grid">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <span class="social-emoji">🐙</span>
+                <span class="social-name">GitHub</span>
+                <span class="social-sub">Where code goes to hide</span>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <span class="social-emoji">💼</span>
+                <span class="social-name">LinkedIn</span>
+                <span class="social-sub">"Humbled & Honored to announce..."</span>
+              </a>
+
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <span class="social-emoji">🐦</span>
+                <span class="social-name">Twitter / X</span>
+                <span class="social-sub">Hot takes on tech stacks</span>
+              </a>
+
+              <a href="#" id="carrier-pigeon" class="social-pill">
+                <span class="social-emoji">🕊️</span>
+                <span class="social-name">Carrier Pigeon</span>
+                <span class="social-sub">Fastest ping in my neighborhood</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Humorous Contact Form -->
+          <div class="contact-card form-card">
+            <h3>Send a Transmission 🚀</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="user-name">Your Human Alias *</label>
+                <input type="text" id="user-name" name="name" placeholder="e.g., Elon Tusk, Bob the Recruiter" required>
+                <span class="error-msg" id="name-error">Please tell me what to call you!</span>
+              </div>
+
+              <div class="form-group">
+                <label for="user-email">Return Frequency (Email) *</label>
+                <input type="email" id="user-email" name="email" placeholder="e.g., definitely_legit@company.com" required>
+                <span class="error-msg" id="email-error">That doesn't look like a real email address!</span>
+              </div>
+
+              <div class="form-group">
+                <label for="project-type">Reason for Disturbing My Nap</label>
+                <select id="project-type" name="reason">
+                  <option value="job">I want to hire you (I offer unlimited snacks)</option>
+                  <option value="freelance">Build an app for $50 and 2% equity</option>
+                  <option value="bug">Your code broke my toaster</option>
+                  <option value="meme">Just sending high quality dev memes</option>
+                  <option value="printer">Can you fix my wireless printer?</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="user-message">Your Message *</label>
+                <textarea id="user-message" name="message" rows="4" placeholder="Tell me something interesting, or just type 'sudo make me a sandwich'..." required></textarea>
+                <span class="error-msg" id="msg-error">Don't be shy, type at least a couple words!</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Launch Into The Void 🛰️</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="footer-brand">
+          <strong>&lt;dev/sleep_deprived&gt;</strong>
+        </p>
+        <p class="footer-note">
+          Handcrafted with vanilla HTML, CSS, JavaScript, and zero external frameworks.
+        </p>
+        <p class="footer-disclaimer">
+          No &lt;div&gt;s were harmed during the development of this site (except for that one that stubbornly refused to center).
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <button id="back-to-top" class="btn btn-secondary btn-sm" aria-label="Back to top">
+          <span>Back to Top ⬆️</span>
+        </button>
+        <p class="footer-copy">© 2026 Professional Procrastinator. All bugs reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
